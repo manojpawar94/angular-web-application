@@ -1,0 +1,32 @@
+<div class="top-bar">
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-4 col-sm-4"></div>
+        <div class="col-xs-4 col-sm-4">
+            <mat-card class="login-card">
+                <mat-card-content>
+                    <h1 style="text-align: center;">DevOps Tool</h1>
+                    <form [formGroup]="loginForm">
+                        <mat-form-field appearance="standard" class="w-100">
+                            <mat-label>SOEID</mat-label>
+                            <input matInput formControlName="soeid">
+                            <mat-error *ngIf="lf.soeid.invalid">SOEID can not empty</mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="standard" class="w-100">
+                            <mat-label>Password</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                            <mat-error *ngIf="lf.password.invalid">Password can not be empty</mat-error>
+                        </mat-form-field>
+                        <button mat-flat-button class="w-100" color="primary" (click)="login()">Login</button>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-xs-4 col-sm-4"></div>
+    </div>
+</div>

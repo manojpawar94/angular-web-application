@@ -1,0 +1,16 @@
+<mat-sidenav-container class="product-container">
+    <mat-sidenav class="product-sidenav" mode="side" [fixedInViewport]="fixedInViewport" [fixedTopGap]="fixedTopGap"
+        [fixedBottomGap]="fixedBottomGap" opened>
+        <mat-selection-list #shoes [multiple]="false">
+            <mat-list-option *ngFor="let actionLinkItem of sidebarActionlinks" [value]="actionLinkItem"
+                [routerLinkActive]="['active']" [routerLink]="[actionLinkItem.path]">
+                <mat-icon mat-list-icon>{{actionLinkItem.icon}}</mat-icon>
+                <div mat-line>{{actionLinkItem.title}}</div>
+            </mat-list-option>
+        </mat-selection-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

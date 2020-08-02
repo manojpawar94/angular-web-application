@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6 col-sm-4" style="display: inline !important;">
+                <span class="title">DevOps Tool</span>
+                <div class="appbar-menu">
+                    <button mat-flat-button [routerLinkActive]="['active']" [routerLink]="['./dashboard']"
+                        class="appbar-menu-item" color="primary">Dashboard</button>
+                    <button mat-flat-button (click)="openAddProductDailog()"
+                        class="appbar-menu-item" color="primary">Create</button>
+                    <button mat-flat-button class="appbar-menu-item" color="primary">Settings</button>
+                </div>
+            </div>
+            <div class="col-4 col-sm-7"></div>
+            <div class="col-2 col-sm-1">
+                <mat-icon class="profile" aria-hidden="false" aria-label="Example account_circle icon"
+                    [matMenuTriggerFor]="beforeMenu">
+                    account_circle
+                </mat-icon>
+                <mat-menu #beforeMenu="matMenu" xPosition="before">
+                    <button mat-menu-item>
+                        <mat-icon>person</mat-icon>
+                        <span>Profile</span>
+                    </button>
+                    <mat-divider></mat-divider>
+                    <button mat-menu-item [routerLink]="['']">
+                        <mat-icon>power_settings_new</mat-icon>
+                        <span>Logout</span>
+                    </button>
+                </mat-menu>
+            </div>
+        </div>
+    </div>
+</mat-toolbar>

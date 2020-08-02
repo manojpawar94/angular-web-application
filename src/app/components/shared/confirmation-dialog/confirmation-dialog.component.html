@@ -1,0 +1,9 @@
+<!-- dialog-box.component.html -->
+<h2 mat-dialog-title><strong>{{data.title}}</strong></h2>
+<div mat-dialog-content>
+    <span>{{data.message}}</span>
+</div>
+<div mat-dialog-actions style="text-align: right;">
+    <button mat-button (click)="doAction()" mat-stroked-button color={{data.buttonColor}}>{{data.action}}</button>
+    <button mat-button (click)="closeDialog()" mat-stroked-button>Cancel</button>
+</div>

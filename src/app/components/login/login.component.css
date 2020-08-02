@@ -1,0 +1,10 @@
+.top-bar{
+    background: #3f51b5;
+    height: 160PX !important;
+}
+.login-card{
+    margin-top: -75px !important;
+    margin-left: 24px;
+    margin-right: 24px;
+    padding: 16px;
+}

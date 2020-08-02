@@ -1,0 +1,32 @@
+.mat-toolbar-row, .mat-toolbar-single-row {
+    height: 52px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    vertical-align: middle !important;
+}
+
+.appbar-menu {
+    display: inline-block;
+    padding-left: 32px !important;
+}
+
+.appbar-menu .appbar-menu-item {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px !important;
+    font-weight: normal;
+    padding-left: 12px;
+}
+
+.profile {
+    vertical-align: middle !important;
+    font-size: 36px !important;
+    height: 36px !important;
+    width: 36px !important;
+}
+
+.mat-menu-panel {
+    min-width: 200px !important;
+}

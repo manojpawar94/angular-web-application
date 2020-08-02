@@ -1,0 +1,48 @@
+<div *ngIf="new; else Update" style="text-align: center;">
+    <h2>Configure New Product</h2>
+</div>
+<ng-template #Update>
+    <h2>CI/CD Product Details</h2>
+</ng-template>
+<form [formGroup]="productForm" class="form-padding">
+    <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Product Name</mat-label>
+        <input matInput formControlName="productName">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Application Name</mat-label>
+        <mat-select formControlName="appId">
+            <mat-option value="12">Test_APP</mat-option>
+            <mat-option value="13">Test_APP1</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="productDesc"></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Build Pattern</mat-label>
+        <input matInput formControlName="buildPattern">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Dev Build Locator</mat-label>
+        <input matInput formControlName="devBuildLocator">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Sit Build Locator</mat-label>
+        <input matInput formControlName="sitBuildLocator">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Teamcity Token</mat-label>
+        <input matInput formControlName="teamcityToken">
+    </mat-form-field>
+    <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Teamcity Instance</mat-label>
+        <mat-select formControlName="teamcityInstance">
+            <mat-option value="UAT">UAT</mat-option>
+            <mat-option selected value="PROD">PROD</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-flat-button color="primary" (onclick)="save()">{{new ? 'Save': 'Update'}}</button>
+    <button mat-flat-button>Cancel</button>
+</form>
